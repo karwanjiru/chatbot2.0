@@ -7,7 +7,7 @@ st.set_page_config(page_title="🤖💬 CareerCompass")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title🤖💬 CareerCompass')
+    st.title('🤖💬 CareerCompass')
     st.write('This chatbot is created to assist in navigation through Four3.')
     if 'REPLICATE_API_TOKEN' in st.secrets:
         st.success('API key already provided!', icon='✅')
