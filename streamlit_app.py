@@ -40,6 +40,15 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
+if "chat_history" not in st.session_state:
+    st.session_state.chat_history = []
+
+# Function to display chat history
+def display_chat_history():
+    for i, (user, assistant) in enumerate(st.session_state.chat_history):
+        st.text_area(f"User [{i}]", value=user, height=50, max_chars=None, key=f"user_{i}", disabled=True)
+        st.text_area(f"Assistant [{i}]", value=assistant, height=50, max_chars=None, key=f"assistant_{i}", disabled=True)
+
 def clear_chat_history():
     st.session_state.messages = [{"role": "assistant", "content": "How may I assist you today?"}]
 st.sidebar.button('Clear Chat History', on_click=clear_chat_history)
