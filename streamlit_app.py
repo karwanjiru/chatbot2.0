@@ -3,11 +3,11 @@ import replicate
 import os
 
 # App title
-st.set_page_config(page_title="🤖💬 CareerCompass")
+st.set_page_config(page_title="🤖💬 𝕮𝖆𝖗𝖊𝖊𝖗𝕮𝖔𝖒𝖕𝖆𝖘𝖘")
 
 # Replicate Credentials
 with st.sidebar:
-    st.title('🤖💬 CareerCompass')
+    st.title('🤖💬 𝕮𝖆𝖗𝖊𝖊𝖗𝕮𝖔𝖒𝖕𝖆𝖘𝖘')
     st.write('This chatbot is created to assist in navigation through Four3.')
     if 'REPLICATE_API_TOKEN' in st.secrets:
         st.success('API key already provided!', icon='✅')
